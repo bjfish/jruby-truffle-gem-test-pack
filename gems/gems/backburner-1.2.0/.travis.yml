@@ -1,0 +1,21 @@
+# http://about.travis-ci.org/docs/user/build-configuration/
+rvm:
+  - 1.9.3
+  - 2.0.0
+  - rbx-2
+before_install:
+  - curl -L https://github.com/kr/beanstalkd/archive/v1.9.tar.gz | tar xz -C /tmp
+  - cd /tmp/beanstalkd-1.9/
+  - make
+  - ./beanstalkd &
+  - cd $TRAVIS_BUILD_DIR
+matrix:
+  allow_failures:
+    - rvm: rbx-2
+script:
+  - bundle install
+  - bundle exec rake test
+gemfile: Gemfile
+notifications:
+  recipients:
+    - nesquena@gmail.com

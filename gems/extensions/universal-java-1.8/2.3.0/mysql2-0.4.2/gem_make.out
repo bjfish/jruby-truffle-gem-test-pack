@@ -1,0 +1,9 @@
+current directory: /Users/pitr/Workspace/labs/jruby/test/truffle/ecosystem/gem-testing/rails/activemodel/.jruby+truffle_bundle/jruby/2.3.0/gems/mysql2-0.4.2/ext/mysql2
+/Users/pitr/Workspace/labs/jruby/bin/jruby -r ./siteconf20160619-37587-1nve3w.rb extconf.rb
+NotImplementedError: C extensions are not supported
+    <top> at /Users/pitr/Workspace/labs/jruby/lib/ruby/stdlib/mkmf.rb:1
+  require at org/jruby/RubyKernel.java:942
+   (root) at /Users/pitr/Workspace/labs/jruby/lib/ruby/stdlib/rubygems/core_ext/kernel_require.rb:1
+    <top> at extconf.rb:2
+
+extconf failed, exit code 1

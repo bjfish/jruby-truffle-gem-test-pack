@@ -1,0 +1,16 @@
+# pack-refs with: peeled fully-peeled 
+6990ff9d968027a54bdc878d0a516f537fd379f7 refs/heads/api
+e56e69c7b0849cfb969ea85fde5fb257edafe348 refs/heads/batch-processing
+ba9425411e493bebc1596aafc81aca97e4a91064 refs/heads/gh-pages
+9bcce0404a5e82c664e382cf136754a56f594471 refs/heads/kestrel
+d098e2657c92e89a6413bebd9c033930759c061f refs/heads/master
+c1628d697a4cf9f3cb0f5f75403df1d90e31fc54 refs/tags/v0.1.0
+cd64cd3509dff66b260c943ccfba28767ef73309 refs/tags/v0.1.1
+f73d589c4bf449139fd4007e8f0351d3c5549966 refs/tags/v0.1.2
+^aee669e801299fd13848a16a993275fe3c9be5e9
+2d1a4b2eef5214d054f72e4a6b6e580030df04e5 refs/tags/v0.1.3
+^9702ed2df577d9b3c97b6fd226aaafcbdbba755a
+f69e7b640947151e117834c272f8ef2caba38a46 refs/tags/v0.1.4
+^80a9a25a13c5a0373acdd38fd29a77510542cdb9
+f87e0df589193ecf325df05aca272b90bb02f487 refs/tags/v0.2.0
+^be3d406a69dd76be5ea5f5d913e12a5a024b9936

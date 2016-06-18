@@ -1,0 +1,78 @@
+2015-09-28 version 1.5.11:
+
+* Fix unexpected logger option handling [#22]
+* Fix gem homepage link
+
+
+2014-10-27 version 1.5.10:
+
+* Added worker_type=spawn (experimental)
+* Fixed Worker#config to reference Server#config so that Worker#reload reads
+  the new config reloaded by Server#reload (=ConfigLoader#reload_config) in
+  worker_type=thread and embedded
+* Server#stop, #restart and #reload show a debug log message
+
+
+2014-07-24 version 1.5.9:
+
+* Fixed DaemonLogger#reoepen! on Ruby >= 2.1.0
+
+
+2014-06-27 version 1.5.8:
+
+* Use standard LogDevice on Ruby >= 2.1.0 imporoved at https://github.com/ruby/ruby/pull/428
+
+
+2013-10-31 version 1.5.7:
+
+* Fixed :log parameter handling
+
+
+2013-10-20 version 1.5.6:
+
+* Fixed log rotation in worker_type=process mode [#9]
+* DaemonLogger supports 'trace' level
+
+
+2013-09-17 version 1.5.5:
+
+* worker_type=thread and embedded show uncaught errors caused in Worker#stop
+  and Worker#reload interface
+* ProcessManager: enables child process heartbeat only if enable_heartbeat
+  option is true
+* ProcessManager: doesn't call fcntl on pipe pairs if F_SETFD or FD_CLOEXEC
+  is not defined
+* ProcessManager: added #spawn(*args) method
+
+
+2013-09-10 version 1.5.4:
+
+* SignalThread: fixed "Unexpected error can't be called from trap context"
+  error in Ruby 2.0 (Thanks to @jondot and @sonots)
+
+
+2013-06-30 version 1.5.3:
+
+* Daemon: uses Process::UID.from_name and Process::GID.from_name
+  instead of running id command
+* worker_type=thread calls before_fork
+* Added MultiWorkerServer#join_workers
+* DaemonLogger: fixed #initialize to use config[:log_level]
+
+
+2013-06-11 version 1.5.2:
+
+* Updated default parameters of ProcessManager to be more conservative
+* Daemon: added :daemonize_error_exit_code option
+* Fixed ServerEngine.create
+
+
+2013-06-04 version 1.5.1:
+
+* Changed #close callback to #after_start
+
+
+2013-06-01 version 1.5.0:
+
+* First release
+
