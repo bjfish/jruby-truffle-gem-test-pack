@@ -1,0 +1,20 @@
+current directory: /Users/chrisseaton/Documents/ruby/jruby-truffle-gem-test-pack/gems/gems/oily_png-1.2.0/ext/oily_png
+/Users/chrisseaton/.rbenv/versions/2.3.1/bin/ruby -r ./siteconf20160703-28803-t9lfiz.rb extconf.rb
+creating Makefile
+
+current directory: /Users/chrisseaton/Documents/ruby/jruby-truffle-gem-test-pack/gems/gems/oily_png-1.2.0/ext/oily_png
+make "DESTDIR=" clean
+
+current directory: /Users/chrisseaton/Documents/ruby/jruby-truffle-gem-test-pack/gems/gems/oily_png-1.2.0/ext/oily_png
+make "DESTDIR="
+compiling color.c
+compiling oily_png_ext.c
+compiling operations.c
+compiling png_decoding.c
+compiling png_encoding.c
+compiling resampling.c
+linking shared-object oily_png/oily_png.bundle
+
+current directory: /Users/chrisseaton/Documents/ruby/jruby-truffle-gem-test-pack/gems/gems/oily_png-1.2.0/ext/oily_png
+make "DESTDIR=" install
+/usr/local/bin/ginstall -c -m 0755 oily_png.bundle ./.gem.20160703-28803-w59siu/oily_png

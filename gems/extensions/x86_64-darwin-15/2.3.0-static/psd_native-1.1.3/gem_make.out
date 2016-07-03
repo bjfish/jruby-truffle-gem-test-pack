@@ -1,0 +1,56 @@
+current directory: /Users/chrisseaton/Documents/ruby/jruby-truffle-gem-test-pack/gems/gems/psd_native-1.1.3/ext/psd_native
+/Users/chrisseaton/.rbenv/versions/2.3.1/bin/ruby -r ./siteconf20160703-28944-1sa57j.rb extconf.rb
+creating Makefile
+
+current directory: /Users/chrisseaton/Documents/ruby/jruby-truffle-gem-test-pack/gems/gems/psd_native-1.1.3/ext/psd_native
+make "DESTDIR=" clean
+
+current directory: /Users/chrisseaton/Documents/ruby/jruby-truffle-gem-test-pack/gems/gems/psd_native-1.1.3/ext/psd_native
+make "DESTDIR="
+compiling blender.c
+compiling canvas.c
+compiling clipping_mask.c
+compiling color.c
+compiling compose.c
+compose.c:351:32: warning: taking the absolute value of unsigned type 'unsigned int' has no effect [-Wabsolute-value]
+  new_r = BLEND_CHANNEL(R(bg), abs(R(bg) - R(fg)), alpha.mix);
+                               ^
+compose.c:351:32: note: remove the call to 'abs' since unsigned values cannot be negative
+  new_r = BLEND_CHANNEL(R(bg), abs(R(bg) - R(fg)), alpha.mix);
+                               ^~~
+./compose.h:9:49: note: expanded from macro 'BLEND_CHANNEL'
+#define BLEND_CHANNEL(b, f, a) ((((b) << 8) + ((f) - (b)) * (a)) >> 8)
+                                                ^
+compose.c:352:32: warning: taking the absolute value of unsigned type 'unsigned int' has no effect [-Wabsolute-value]
+  new_g = BLEND_CHANNEL(G(bg), abs(G(bg) - G(fg)), alpha.mix);
+                               ^
+compose.c:352:32: note: remove the call to 'abs' since unsigned values cannot be negative
+  new_g = BLEND_CHANNEL(G(bg), abs(G(bg) - G(fg)), alpha.mix);
+                               ^~~
+./compose.h:9:49: note: expanded from macro 'BLEND_CHANNEL'
+#define BLEND_CHANNEL(b, f, a) ((((b) << 8) + ((f) - (b)) * (a)) >> 8)
+                                                ^
+compose.c:353:32: warning: taking the absolute value of unsigned type 'unsigned int' has no effect [-Wabsolute-value]
+  new_b = BLEND_CHANNEL(B(bg), abs(B(bg) - B(fg)), alpha.mix);
+                               ^
+compose.c:353:32: note: remove the call to 'abs' since unsigned values cannot be negative
+  new_b = BLEND_CHANNEL(B(bg), abs(B(bg) - B(fg)), alpha.mix);
+                               ^~~
+./compose.h:9:49: note: expanded from macro 'BLEND_CHANNEL'
+#define BLEND_CHANNEL(b, f, a) ((((b) << 8) + ((f) - (b)) * (a)) >> 8)
+                                                ^
+3 warnings generated.
+compiling file.c
+compiling image_mode_cmyk.c
+compiling image_mode_greyscale.c
+compiling image_mode_rgb.c
+compiling layer_raw.c
+compiling mask.c
+compiling psd_native_ext.c
+compiling rle_decoding.c
+compiling util.c
+linking shared-object psd_native/psd_native.bundle
+
+current directory: /Users/chrisseaton/Documents/ruby/jruby-truffle-gem-test-pack/gems/gems/psd_native-1.1.3/ext/psd_native
+make "DESTDIR=" install
+/usr/local/bin/ginstall -c -m 0755 psd_native.bundle ./.gem.20160703-28944-uf5jfc/psd_native
