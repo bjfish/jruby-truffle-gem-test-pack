@@ -15,8 +15,8 @@ Gem::Specification.new do |s|
   s.homepage = "http://json-jruby.rubyforge.org/".freeze
   s.licenses = ["Ruby".freeze]
   s.rubyforge_project = "json-jruby".freeze
-  s.rubygems_version = "2.6.4".freeze
+  s.rubygems_version = "2.6.6".freeze
   s.summary = "JSON implementation for JRuby".freeze
 
-  s.installed_by_version = "2.6.4" if s.respond_to? :installed_by_version
+  s.installed_by_version = "2.6.6" if s.respond_to? :installed_by_version
 end

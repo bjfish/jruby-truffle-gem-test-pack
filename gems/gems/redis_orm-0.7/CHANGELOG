@@ -1,0 +1,68 @@
+v0.7 [03-05-2013]
+FEATURES
+* implemented Array and Hash properties types
+* added ability to specify an *expire* value for the record via method of the class and added inline *expire_in* key that can be used while saving objects (referencial keys in expireable record also expireables)
+* Add model generator [Tatsuya Sato]
+BUGS
+* fixed a bug with Date property implementation
+* refactored *save* method
+
+v0.6.2 [23-05-2012]
+* adds an ability to specify/create indices on *has_one* and *belongs_to* associations
+* fixed error with updating indices in *belongs_to* association with :as option 
+* tests refactoring, now all tests are run with Rake::TestTask 
+* moved all classes and modules from test cases to special folders (test/classes, test/modules)
+* fixed bug: :default values should be properly transformed to the right classes (if :default values are wrong) so when comparing them to other/stored instances they'll be the same
+
+v0.6.1 [05-12-2011]
+* rewritten sortable functionality for attributes which values are strings
+* added Gemfile to the project, improved tests
+
+v0.6 [12-09-2011]
+* added equality operator for object, #to_s method for inspecting objects, #find! which could throw RecordNotFound error
+* added self.descendants class method which returns all inherited from RedisOrm::Base classes
+* introduced :sortable option (in property declaration and #find conditions hash) - rudimentary ability to sort records by any property (not just by default 'created_at')
+* now handling models withing modules definitions (test for this in associations_test.rb)
+* properly handling :as parameter in options for has_many/belongs_to self-references
+* binding related models while creating model instance (like this: Article.create(:comment => comment))
+* bunch of small fixes, updated tests and README.md
+
+v0.5.1 [27-07-2011]
+* added support of uuid as an id/primary key
+* added documentation on uuid support and connection to the redis server
+
+v0.5 [02-07-2011]
+* added support of *:conditions* hash in *:options* hash for has_many association in #find/#all methods
+* made keys order-independent in *:conditions* hash
+
+v0.4.2 [25-06-2011]
+* fixed bug with wrong saving of :default value/index for boolean type, fixed bug with #find(:all), #find(:first), #find(:last) function calls, added test for it
+* added simple test to ensure correct search on boolean properties
+* properly destroy dependent records
+* delete polymorphic records properly along with their backlinks
+
+v0.4.1 [23-06-2011]
+* fixed clitical bug: records after #destroy still available (added test for it)
+* added simple atomicity test
+* README.md: added link to my article "how to integrate redis_orm with paperclip"
+
+v0.4 [16-06-2011]
+* added :conditions key to the options hash in #find/#all methods
+* added #{property_name}_changed? instance method
+* fixed self-reference link for has_one association/added test for it
+* added :case_insensitive option to index declaration
+* fixed bug with no output when installed rspec > 2.6
+* added more tests and refactored old ones, updated documentation
+
+v0.3 [06-06-2011]
+* fixed #find functionality both for model itself and for has_many proxy
+* made sure ORM correctly resets associations when nil/[] provided
+* improved documentation, test for has_many proxy methods :+= and :<< added
+
+v0.2 [04-06-2011]
+* added polymorphic association
+* added *timestamps* declaration for the model
+* fixed several bugs and improved test coverage
+
+v0.1. [02-06-2011]
+* first release, w00t!
