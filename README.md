@@ -15,11 +15,16 @@ The tool has options to use this repository `jruby+truffle ci --offline
 <gem-name>` (also se `--offline-gem-path` option).
 
 To add gems for ecosystem tests merge their `.jruby+truffle_bundle/jruby/2.3.0`
-with `./gems`. (e.g. `rsync -a rails/activemodel/.jruby+truffle_bundle/jruby/2.3.0/
-../../../../../jruby-truffle-gem-test-pack/gems/`) If the dependencies of the
-gem have a gem pulled from git, the dir containing the GIT repository can be
-added with `git add gems/bundler/gems/qu-d098e2657c92/` (the last `/` is
-significant).
+with `./gems`, e.g.:
+
+    rsync -a rails/activemodel/.jruby+truffle_bundle/jruby/2.3.0/ \
+    ../../../../../jruby-truffle-gem-test-pack/gems/
+
+If the dependencies of the gem have a gem pulled from git, the dir containing
+the GIT repository can be added with:
+
+    git add gems/bundler/gems/qu-d098e2657c92/ 
+    # the last `/` is significant
 
 ## `gem-testing` directory
 
