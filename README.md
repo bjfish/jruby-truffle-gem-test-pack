@@ -21,7 +21,7 @@ with `./gems`, e.g.:
     ../../../../../jruby-truffle-gem-test-pack/gems/
 
 If the dependencies of the gem have a gem pulled from git, the dir containing
-the GIT repository can be added with:
+the git repository can be added with:
 
     git add gems/bundler/gems/qu-d098e2657c92/ 
     # the last `/` is significant
