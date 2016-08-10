@@ -10,7 +10,7 @@ Gem::Specification.new do |s|
   s.require_paths = ["lib".freeze]
   s.authors = ["Technion".freeze]
   s.bindir = "exe".freeze
-  s.date = "2016-08-09"
+  s.date = "2016-08-10"
   s.description = "Argon2 FFI binding".freeze
   s.email = ["technion@lolware.net".freeze]
   s.extensions = ["ext/argon2_wrap/extconf.rb".freeze]
