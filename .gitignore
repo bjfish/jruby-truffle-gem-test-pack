@@ -1,4 +1,5 @@
 .idea
 .jruby+truffle_bundle
 .jruby-truffle-tool_bundle
+.ruby-version
 *.iml
