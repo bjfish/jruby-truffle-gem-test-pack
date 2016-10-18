@@ -13,7 +13,8 @@ require 'active_record/connection_adapters/postgresql/database_statements'
 require 'arel/visitors/bind_visitor'
 
 # Make sure we're using pg high enough for PGResult#values
-gem 'pg', '~> 0.15'
+# TODO (pitr-ch 12-Oct-2016): do not enforce pg to be able to use postgres-pr
+# gem 'pg', '~> 0.15'
 require 'pg'
 
 require 'ipaddr'
