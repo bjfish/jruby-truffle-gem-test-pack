@@ -1,17 +1,11 @@
 class PeopleController < ApplicationController
 
-  PLATFORM = if defined? Truffle
-               Truffle::Graal.graal? ? :graal : :truffle
-             else
-               :jruby
-             end
-
   # stubbed, will not work
   skip_before_filter :verify_authenticity_token
 
   def index
-    @people = Person.all
-    @person = Person.new(name: 'test')
+    @people = RedisPerson.all
+    @person = RedisPerson.new(name: 'test')
 
     respond_to do |format|
       format.json { render json: @people }
@@ -20,7 +14,7 @@ class PeopleController < ApplicationController
   end
 
   def create
-    person = Person.create name: params[:name], email: params[:email]
+    person = RedisPerson.create name: params[:name], email: params[:email]
 
     respond_to do |format|
       format.json { render json: person }
@@ -29,7 +23,7 @@ class PeopleController < ApplicationController
   end
 
   def destroy
-    person = Person.find params[:id]
+    person = RedisPerson.find params[:id]
     person.destroy
 
     respond_to do |format|
@@ -39,7 +33,7 @@ class PeopleController < ApplicationController
   end
 
   def destroy_all
-    Person.all.each(&:destroy)
+    RedisPerson.all.each(&:destroy)
 
     respond_to do |format|
       format.json { render json: true }

@@ -49,6 +49,7 @@
                 Object.send :remove_const, :JRUBY_VERSION
                 require_relative '../jruby+truffle/2.2.0/gems/systemu-2.6.5/lib/systemu'
                 JRUBY_VERSION = jruby_version
+    "irb/completion.rb": "puts 'irb/completion stubbed'"
     rails-html-sanitizer.rb: "puts 'HTML sanitization stubbed'"
 
 :run:

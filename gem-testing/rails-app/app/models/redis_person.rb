@@ -1,4 +1,4 @@
-class Person < RedisOrm::Base
+class RedisPerson < RedisOrm::Base
   property :name, String
   property :email, String
   index :email
