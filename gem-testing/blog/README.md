@@ -2,6 +2,7 @@
 
 -   Setup environment: `jruby-truffle-tool setup --offline`
 -   Configure `config/database.yml` (Postgresql required)
+-   Start Postgres (eg `postgres -D /usr/local/var/postgres`)
 -   Create database: `jruby-truffle-tool run bin/rake db:create`   
 -   Migrate database: `jruby-truffle-tool run bin/rake db:migrate`   
 -   Run Rails server: `jruby-truffle-tool run bin/rails server`
