@@ -6,6 +6,19 @@
                         end
                       end
     stubs.rb: |
+              capture_stdout = -> (&block) do
+                original_stdout = $stdout
+                $stdout         = fake = StringIO.new
+                begin
+                  yield
+                ensure
+                  $stdout = original_stdout
+                end
+                fake.string
+              end
+
+              capture_stdout.() { require 'racc/parser' }
+
               require 'action_view'
               require 'action_view/helpers'
               require 'action_view/helpers/sanitize_helper'
