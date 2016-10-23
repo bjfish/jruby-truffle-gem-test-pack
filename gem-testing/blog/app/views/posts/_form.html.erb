@@ -1,5 +1,5 @@
 <%
-    new_post = action_name == 'new'
+    new_post = %w[new create].include? action_name
     path = new_post ? '/posts' : post_path(@post)
     method = new_post ? 'push' : 'put'
 %>
