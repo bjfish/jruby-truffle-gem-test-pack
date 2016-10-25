@@ -19,6 +19,18 @@
 
               capture_stdout.() { require 'racc/parser' }
 
+              require 'rubygems'
+              module Kernel
+                gem_method = instance_method :gem
+                define_method :gem do |name, *args, &block|
+                  if name == 'pg'
+                    # do nothing
+                  else
+                    gem_method.bind(self).call name, *args, &block
+                  end
+                end
+              end
+
               require 'action_view'
               require 'action_view/helpers'
               require 'action_view/helpers/sanitize_helper'
