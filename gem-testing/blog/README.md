@@ -26,6 +26,17 @@
         * Item 2
         * Item 3
         
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus est ante, 
+        congue aliquet suscipit vel, mollis ac quam.        
+        
         NOTE: This is really just an example.
          
-         
+## Alternatively using `bundler`
+
+-   _Omitting first 3 steps from above._     
+-   Install stubs `jruby-truffle-tool setup --offline` (used by bundle exec)                 
+-   Install gems `jruby-truffle -r bundler-workarounds -S bundle install`
+-   Create database: `jruby-truffle -r bundler-workarounds -I .jruby-truffle-tool_bundle/mocks/ -r stubs -S bundle exec bin/rake db:create`    
+-   Migrate database: `jruby-truffle -r bundler-workarounds -I .jruby-truffle-tool_bundle/mocks/ -r stubs -S bundle exec bin/rake db:migrate`   
+-   Run Rails server: `jruby-truffle -r bundler-workarounds -I .jruby-truffle-tool_bundle/mocks/ -r stubs -S bundle exec bin/rails server`
+-   _Remaining steps omitted._
