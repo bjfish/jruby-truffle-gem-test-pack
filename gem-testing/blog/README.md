@@ -34,7 +34,7 @@
 ## Alternatively using `bundler`
 
 -   _Omitting first 3 steps from above._     
--   Install stubs `jruby-truffle-tool setup --offline` (used by bundle exec)                 
+-   Install stubs `jruby-truffle-tool setup --no-bundler` (used by bundle exec)
 -   Install gems `jruby-truffle -r bundler-workarounds -S bundle install`
 -   Create database: `jruby-truffle -r bundler-workarounds -I .jruby-truffle-tool_bundle/mocks/ -r stubs -S bundle exec bin/rake db:create`    
 -   Migrate database: `jruby-truffle -r bundler-workarounds -I .jruby-truffle-tool_bundle/mocks/ -r stubs -S bundle exec bin/rake db:migrate`   
