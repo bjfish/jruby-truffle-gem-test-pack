@@ -1,8 +1,8 @@
 # Rails Demo - Blog
 
--   Setup environment: `jruby-truffle-tool setup --offline`
 -   Configure `config/database.yml` (Postgresql required)
 -   Start Postgres (eg `postgres -D /usr/local/var/postgres`)
+-   Setup environment: `jruby-truffle-tool setup --offline`
 -   Create database: `jruby-truffle-tool run bin/rake db:create`   
 -   Migrate database: `jruby-truffle-tool run bin/rake db:migrate`   
 -   Run Rails server: `jruby-truffle-tool run bin/rails server`
@@ -33,10 +33,13 @@
          
 ## Alternatively using `bundler`
 
--   _Omitting first 3 steps from above._     
+-   _Omitting first 2 steps from above._     
 -   Install stubs `jruby-truffle-tool setup --no-bundler` (used by bundle exec)
--   Install gems `jruby-truffle -r bundler-workarounds -S bundle install`
--   Create database: `jruby-truffle -r bundler-workarounds -I .jruby-truffle-tool_bundle/mocks/ -r stubs -S bundle exec bin/rake db:create`    
--   Migrate database: `jruby-truffle -r bundler-workarounds -I .jruby-truffle-tool_bundle/mocks/ -r stubs -S bundle exec bin/rake db:migrate`   
--   Run Rails server: `jruby-truffle -r bundler-workarounds -I .jruby-truffle-tool_bundle/mocks/ -r stubs -S bundle exec bin/rails server`
+-   Setup environment variables
+    -   `export JRUBY_OTPS='-X+T'` (fish: `set -x JRUBY_OPTS '-X+T'`)
+    -   `export RUBYOTP='-r ./workarounds'` (fish: `set -x RUBYOPT '-r ./workarounds'`)
+-   Install gems `bundle install`
+-   Create database: `bundle exec bin/rake db:create`    
+-   Migrate database: `bundle exec bin/rake db:migrate`   
+-   Run Rails server: `bundle exec bin/rails server`
 -   _Remaining steps omitted._
