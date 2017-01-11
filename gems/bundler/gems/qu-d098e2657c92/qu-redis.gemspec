@@ -8,12 +8,12 @@ Gem::Specification.new do |s|
   s.required_rubygems_version = Gem::Requirement.new(">= 0".freeze) if s.respond_to? :required_rubygems_version=
   s.require_paths = ["lib".freeze]
   s.authors = ["Brandon Keepers".freeze]
-  s.date = "2016-06-19"
+  s.date = "2017-01-11"
   s.description = "Redis backend for qu".freeze
   s.email = ["brandon@opensoul.org".freeze]
   s.files = ["lib/qu-redis.rb".freeze, "lib/qu/backend/redis.rb".freeze]
   s.homepage = "http://github.com/bkeepers/qu".freeze
-  s.rubygems_version = "2.6.4".freeze
+  s.rubygems_version = "2.6.8".freeze
   s.summary = "Redis backend for qu".freeze
 
   if s.respond_to? :specification_version then
