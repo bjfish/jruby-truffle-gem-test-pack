@@ -1,10 +1,5 @@
 :setup:
   :file:
-    bundler/setup.rb: |
-                      module Bundler
-                        def self.require(*args)
-                        end
-                      end
     stubs.rb: |
               capture_stdout = -> (&block) do
                 original_stdout = $stdout
@@ -57,11 +52,6 @@
                   end
                 end
               end
-    systemu.rb: |
-                jruby_version = JRUBY_VERSION
-                Object.send :remove_const, :JRUBY_VERSION
-                require_relative '../jruby+truffle/2.2.0/gems/systemu-2.6.5/lib/systemu'
-                JRUBY_VERSION = jruby_version
     "irb/completion.rb": "puts 'irb/completion stubbed'"
     rails-html-sanitizer.rb: "puts 'HTML sanitization stubbed'"
 
